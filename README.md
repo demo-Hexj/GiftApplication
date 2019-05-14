@@ -14,4 +14,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 	dependencies {
 	        implementation 'com.github.demo-Hexj:GiftApplication:Tag'
+		 implementation 'com.github.bumptech.glide:glide:4.3.0'
 	}
+
+   
