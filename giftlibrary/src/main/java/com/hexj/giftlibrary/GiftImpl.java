@@ -49,5 +49,9 @@ public interface GiftImpl {
      */
     void giving(List<GiftByView> giftList);
 
-
+    /**
+     * 同一个用户送出礼物，且每个接受者只能接收一个礼物
+     * @param giftList
+     */
+    void givingByOne(List<GiftByView> giftList);
 }

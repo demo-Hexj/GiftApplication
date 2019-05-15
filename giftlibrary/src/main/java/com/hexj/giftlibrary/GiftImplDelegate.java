@@ -104,7 +104,7 @@ public class GiftImplDelegate implements GiftImpl {
     }
 
     @Override
-    public void initLocationOfParent(float horizontalLocation,float verticalLocation) {
+    public void initLocationOfParent(float horizontalLocation, float verticalLocation) {
         this.horizontalLocation = horizontalLocation < 0 ? 0 : horizontalLocation > 1 ? 1 : horizontalLocation;
         this.verticalLocation = verticalLocation < 0 ? 0 : verticalLocation > 1 ? 1 : verticalLocation;
     }
@@ -148,6 +148,15 @@ public class GiftImplDelegate implements GiftImpl {
             } else {
                 gift.setShowAtTime(0);
             }
+            giftByViewQueue.offer(gift);
+        }
+        loop();
+    }
+
+    @Override
+    public void givingByOne(List<GiftByView> giftList) {
+        for (int i = 0; i < giftList.size(); i++) {
+            GiftByView gift = giftList.get(i);
             giftByViewQueue.offer(gift);
         }
         loop();

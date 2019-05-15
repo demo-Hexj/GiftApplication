@@ -63,4 +63,9 @@ public class GiftImplRelativeLayout extends RelativeLayout implements GiftImpl {
     public void giving(List<GiftByView> giftList) {
         giftDelegate.giving(giftList);
     }
+
+    @Override
+    public void givingByOne(List<GiftByView> giftList) {
+        giftDelegate.givingByOne(giftList);
+    }
 }
